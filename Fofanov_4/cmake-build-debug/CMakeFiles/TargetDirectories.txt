@@ -1,0 +1,3 @@
+/home/timur/CLionProjects/Fofanov_4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/timur/CLionProjects/Fofanov_4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/timur/CLionProjects/Fofanov_4/cmake-build-debug/CMakeFiles/Fofanov_4.dir

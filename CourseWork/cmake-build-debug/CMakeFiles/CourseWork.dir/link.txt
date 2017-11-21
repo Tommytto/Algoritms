@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -pthread -g   CMakeFiles/CourseWork.dir/main.cpp.o CMakeFiles/CourseWork.dir/Task.cpp.o CMakeFiles/CourseWork.dir/Processor.cpp.o CMakeFiles/CourseWork.dir/Stack.cpp.o CMakeFiles/CourseWork.dir/Queue.cpp.o  -o CourseWork  -L/usr/include 
