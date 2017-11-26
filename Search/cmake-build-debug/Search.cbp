@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp">
+			<Option target="Search"/>
+		</Unit>
+		<Unit filename="/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.h">
+			<Option target="Search"/>
+		</Unit>
+		<Unit filename="/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp">
+			<Option target="Search"/>
+		</Unit>
+		<Unit filename="/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.h">
+			<Option target="Search"/>
+		</Unit>
 		<Unit filename="/home/timur/education/Algoritms/code/Search/main.cpp">
 			<Option target="Search"/>
 		</Unit>

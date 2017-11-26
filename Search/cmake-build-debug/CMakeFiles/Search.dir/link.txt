@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Search.dir/main.cpp.o  -o Search 
+/usr/bin/c++  -g   CMakeFiles/Search.dir/main.cpp.o CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o  -o Search 

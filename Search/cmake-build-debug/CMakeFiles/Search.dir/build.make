@@ -81,17 +81,69 @@ CMakeFiles/Search.dir/main.cpp.o.provides: CMakeFiles/Search.dir/main.cpp.o.requ
 CMakeFiles/Search.dir/main.cpp.o.provides.build: CMakeFiles/Search.dir/main.cpp.o
 
 
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o: CMakeFiles/Search.dir/flags.make
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o: ../AlgoritmsInSorted.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o -c /home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp
+
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp > CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.i
+
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp -o CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.s
+
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.requires:
+
+.PHONY : CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.requires
+
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.provides: CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.provides.build
+.PHONY : CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.provides
+
+CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.provides.build: CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o
+
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o: CMakeFiles/Search.dir/flags.make
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o: ../AlgoritmsInUnsorted.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o -c /home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp > CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.i
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp -o CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.s
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.requires:
+
+.PHONY : CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.requires
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.provides: CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.provides.build
+.PHONY : CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.provides
+
+CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.provides.build: CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o
+
+
 # Object files for target Search
 Search_OBJECTS = \
-"CMakeFiles/Search.dir/main.cpp.o"
+"CMakeFiles/Search.dir/main.cpp.o" \
+"CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o" \
+"CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o"
 
 # External object files for target Search
 Search_EXTERNAL_OBJECTS =
 
 Search: CMakeFiles/Search.dir/main.cpp.o
+Search: CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o
+Search: CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o
 Search: CMakeFiles/Search.dir/build.make
 Search: CMakeFiles/Search.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Search"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Search"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Search.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +152,8 @@ CMakeFiles/Search.dir/build: Search
 .PHONY : CMakeFiles/Search.dir/build
 
 CMakeFiles/Search.dir/requires: CMakeFiles/Search.dir/main.cpp.o.requires
+CMakeFiles/Search.dir/requires: CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o.requires
+CMakeFiles/Search.dir/requires: CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o.requires
 
 .PHONY : CMakeFiles/Search.dir/requires
 

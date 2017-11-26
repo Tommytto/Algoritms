@@ -123,6 +123,60 @@ Search/fast:
 	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/build
 .PHONY : Search/fast
 
+AlgoritmsInSorted.o: AlgoritmsInSorted.cpp.o
+
+.PHONY : AlgoritmsInSorted.o
+
+# target to build an object file
+AlgoritmsInSorted.cpp.o:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o
+.PHONY : AlgoritmsInSorted.cpp.o
+
+AlgoritmsInSorted.i: AlgoritmsInSorted.cpp.i
+
+.PHONY : AlgoritmsInSorted.i
+
+# target to preprocess a source file
+AlgoritmsInSorted.cpp.i:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.i
+.PHONY : AlgoritmsInSorted.cpp.i
+
+AlgoritmsInSorted.s: AlgoritmsInSorted.cpp.s
+
+.PHONY : AlgoritmsInSorted.s
+
+# target to generate assembly for a file
+AlgoritmsInSorted.cpp.s:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.s
+.PHONY : AlgoritmsInSorted.cpp.s
+
+AlgoritmsInUnsorted.o: AlgoritmsInUnsorted.cpp.o
+
+.PHONY : AlgoritmsInUnsorted.o
+
+# target to build an object file
+AlgoritmsInUnsorted.cpp.o:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o
+.PHONY : AlgoritmsInUnsorted.cpp.o
+
+AlgoritmsInUnsorted.i: AlgoritmsInUnsorted.cpp.i
+
+.PHONY : AlgoritmsInUnsorted.i
+
+# target to preprocess a source file
+AlgoritmsInUnsorted.cpp.i:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.i
+.PHONY : AlgoritmsInUnsorted.cpp.i
+
+AlgoritmsInUnsorted.s: AlgoritmsInUnsorted.cpp.s
+
+.PHONY : AlgoritmsInUnsorted.s
+
+# target to generate assembly for a file
+AlgoritmsInUnsorted.cpp.s:
+	$(MAKE) -f CMakeFiles/Search.dir/build.make CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.s
+.PHONY : AlgoritmsInUnsorted.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Search"
+	@echo "... AlgoritmsInSorted.o"
+	@echo "... AlgoritmsInSorted.i"
+	@echo "... AlgoritmsInSorted.s"
+	@echo "... AlgoritmsInUnsorted.o"
+	@echo "... AlgoritmsInUnsorted.i"
+	@echo "... AlgoritmsInUnsorted.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

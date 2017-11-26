@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp
+AlgoritmsInSorted.h
+/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.h
+
+/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.h
+
+/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp
+AlgoritmsInUnsorted.h
+/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.h
+
+/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.h
+vector
+-
+
+/home/timur/education/Algoritms/code/Search/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+AlgoritmsInUnsorted.h
+/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.h
+

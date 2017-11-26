@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/timur/education/Algoritms/code/Search/AlgoritmsInSorted.cpp" "/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o"
+  "/home/timur/education/Algoritms/code/Search/AlgoritmsInUnsorted.cpp" "/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o"
   "/home/timur/education/Algoritms/code/Search/main.cpp" "/home/timur/education/Algoritms/code/Search/cmake-build-debug/CMakeFiles/Search.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

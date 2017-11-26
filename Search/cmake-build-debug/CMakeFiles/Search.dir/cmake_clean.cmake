@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Search.dir/main.cpp.o"
+  "CMakeFiles/Search.dir/AlgoritmsInSorted.cpp.o"
+  "CMakeFiles/Search.dir/AlgoritmsInUnsorted.cpp.o"
   "Search.pdb"
   "Search"
 )
