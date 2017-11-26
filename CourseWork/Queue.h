@@ -15,17 +15,17 @@ private:
     vector<Task *> taskVector;
     unsigned int maxSize;
     unsigned int pull = 0;
+    bool loadPull = true;
 
 public:
     Queue(unsigned int size);
 
-    void firstToProcessor(Processor *proc);
+    Task* pop_first();
 
     void add(Task *newTask);
 
     unsigned long size();
     unsigned int getMaxSize();
-    void setPull(unsigned int pullCount);
 
 };
 

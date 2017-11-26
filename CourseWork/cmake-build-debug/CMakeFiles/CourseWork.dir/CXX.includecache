@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/timur/CLionProjects/CourseWork/Processor.cpp
+/home/timur/education/Algoritms/code/CourseWork/Processor.cpp
 thread
 -
 unistd.h
@@ -14,55 +14,61 @@ unistd.h
 iostream
 -
 Processor.h
-/home/timur/CLionProjects/CourseWork/Processor.h
+/home/timur/education/Algoritms/code/CourseWork/Processor.h
 
-/home/timur/CLionProjects/CourseWork/Processor.h
+/home/timur/education/Algoritms/code/CourseWork/Processor.h
 Task.h
-/home/timur/CLionProjects/CourseWork/Task.h
+/home/timur/education/Algoritms/code/CourseWork/Task.h
+Stack.h
+/home/timur/education/Algoritms/code/CourseWork/Stack.h
 
-/home/timur/CLionProjects/CourseWork/Queue.cpp
+/home/timur/education/Algoritms/code/CourseWork/Queue.cpp
 iostream
 -
 Queue.h
-/home/timur/CLionProjects/CourseWork/Queue.h
+/home/timur/education/Algoritms/code/CourseWork/Queue.h
 
-/home/timur/CLionProjects/CourseWork/Queue.h
+/home/timur/education/Algoritms/code/CourseWork/Queue.h
 vector
 -
 Task.h
-/home/timur/CLionProjects/CourseWork/Task.h
+/home/timur/education/Algoritms/code/CourseWork/Task.h
 Processor.h
-/home/timur/CLionProjects/CourseWork/Processor.h
+/home/timur/education/Algoritms/code/CourseWork/Processor.h
 
-/home/timur/CLionProjects/CourseWork/Stack.cpp
+/home/timur/education/Algoritms/code/CourseWork/Stack.cpp
 iostream
 -
 Stack.h
-/home/timur/CLionProjects/CourseWork/Stack.h
+/home/timur/education/Algoritms/code/CourseWork/Stack.h
 
-/home/timur/CLionProjects/CourseWork/Stack.h
+/home/timur/education/Algoritms/code/CourseWork/Stack.h
 vector
 -
 Task.h
-/home/timur/CLionProjects/CourseWork/Task.h
+/home/timur/education/Algoritms/code/CourseWork/Task.h
 
-/home/timur/CLionProjects/CourseWork/Task.cpp
+/home/timur/education/Algoritms/code/CourseWork/Task.cpp
 Task.h
-/home/timur/CLionProjects/CourseWork/Task.h
+/home/timur/education/Algoritms/code/CourseWork/Task.h
 
-/home/timur/CLionProjects/CourseWork/Task.h
+/home/timur/education/Algoritms/code/CourseWork/Task.h
 string
 -
 
-/home/timur/CLionProjects/CourseWork/main.cpp
+/home/timur/education/Algoritms/code/CourseWork/main.cpp
 iostream
 -
 thread
 -
+unistd.h
+-
+random
+-
 Stack.h
-/home/timur/CLionProjects/CourseWork/Stack.h
+/home/timur/education/Algoritms/code/CourseWork/Stack.h
 Processor.h
-/home/timur/CLionProjects/CourseWork/Processor.h
+/home/timur/education/Algoritms/code/CourseWork/Processor.h
 Queue.h
-/home/timur/CLionProjects/CourseWork/Queue.h
+/home/timur/education/Algoritms/code/CourseWork/Queue.h
 

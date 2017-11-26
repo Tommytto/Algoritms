@@ -52,7 +52,7 @@ int interpolationSearch(std::vector<int> sortedVector, int digitToSearch) {
 }
 
 int main() {
-    int SIZE = 100 * 100 * 25;
+    int SIZE = 100 * 25;
     int digitToSearch = 9;
     std::vector<int> sortedVector(SIZE);
 

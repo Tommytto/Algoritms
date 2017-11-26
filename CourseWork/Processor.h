@@ -7,12 +7,15 @@
 
 
 #include "Task.h"
+#include "Stack.h"
 
 class Processor {
 private:
     bool isBusy = false;
     Task *currTask;
+    Stack *stack;
 public:
+    Processor(Stack *newStack);
     void runTask(Task *task);
     bool busy();
     void busy(bool busy);

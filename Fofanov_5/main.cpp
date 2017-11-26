@@ -8,28 +8,41 @@ using namespace std;
 typedef vector<int> intSet;
 map<string, intSet> words;
 
-void invertedSearch(vector<string> fileNameList, vector<string> wordsToSearch) {
+void initDictionary(vector<string> fileNameList) {
+    ofstream fout;
     ifstream fin;
     string word;
 
-    if (0 == words.size()) {
-        for (int i = 0; i < fileNameList.size(); i++) {
-            fin.open(fileNameList[i]);
+    fout.open("dictionray.txt");
+    for (int i = 0; i < fileNameList.size(); i++) {
+        fin.open(fileNameList[i]);
 
-            while (fin >> word) {
-                if (words.find(word) == words.end()) {
-                    words[word] = intSet({i});
-                } else {
-                    const int vectorSize = words[word].size();
-                    if (0 < vectorSize && words[word][vectorSize - 1] != i) {
-                        words[word].push_back(i);
-                    }
+        while (fin >> word) {
+            if (words.find(word) == words.end()) {
+                words[word] = intSet({i});
+            } else {
+                const int vectorSize = words[word].size();
+                if (0 < vectorSize && words[word][vectorSize - 1] != i) {
+                    words[word].push_back(i);
                 }
             }
-            fin.close();
         }
+        fin.close();
     }
+    for (auto const& x : words) {
+        fout << x.first << " ";
+        for (int i = 0; i < x.second.size(); i++) {
+            if (i != x.second.size()-1) {
+                fout << x.second[i] << " ";
+            } else {
+                fout << x.second[i];
+            }
+        }
+        fout << endl;
+    }
+}
 
+void invertedSearch(vector<string> fileNameList, vector<string> wordsToSearch) {
     for (int i = 0; i < wordsToSearch.size(); i++) {
         const string currentWord = wordsToSearch[i];
         if (words.find(currentWord) == words.end()) {
@@ -99,80 +112,47 @@ int main() {
             fout << "Lorem Ipsum is simply dummy text \n"
                     "of the printing and typesetting industry. \n"
                     "Lorem Ipsum has been the industry's standard \n"
-                    "dummy text ever since the 1500s, when an unknown\n"
+                    "dummy text ever since the 1500s when an unknown\n"
                     " printer took a galley of type and scrambled it \n"
-                    "to make a type specimen book. It has survived not \n"
-                    "only five centuries, but also the leap into electronic typesetting, \n"
-                    "remaining essentially unchanged. It was popularised in the 1960s with the release of\n"
-                    " Letraset sheets containing Lorem Ipsum passages, and more recently with \n"
+                    "to make a type specimen book It has survived not \n"
+                    "only five centuries but also the leap into electronic typesetting \n"
+                    "remaining essentially unchanged It was popularised in the 1960s with the release of\n"
+                    " Letraset sheets containing Lorem Ipsum passages and more recently with \n"
                     "desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
         } else {
             fout << "There are many variations of \n"
-                    "passages of Lorem Ipsum available,\n"
+                    "passages of Lorem Ipsum available\n"
                     " but the majority have suffered alteration in so\n"
-                    "me form, by injected humour, or randomised words which don't look e\n"
-                    "ven slightly believable. If you are going to use a passage of Lorem Ipsum, you \n"
-                    "need to be sure there isn't anything embarrassing hidden in the middle of text. All the \n"
-                    "Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making\n"
-                    " this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, c\n"
-                    "ombined with a handful of model sentence structures, to generate Lorem Ipsum whi\n"
-                    "ch looks reasonable. The generated Lorem Ipsum is there\n"
-                    "fore always free from repetition, injected humour, or non-characteristic words etc.";
+                    "me form by injected humour or randomised words which don't look e\n"
+                    "ven slightly believable If you are going to use a passage of Lorem Ipsum you \n"
+                    "need to be sure there isn't anything embarrassing hidden in the middle of text All the \n"
+                    "Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary making\n"
+                    " this the first true generator on the Internet It uses a dictionary of over 200 Latin words c\n"
+                    "ombined with a handful of model sentence structures to generate Lorem Ipsum whi\n"
+                    "ch looks reasonable The generated Lorem Ipsum is there\n"
+                    "fore always free from repetition injected humour or non-characteristic words etc";
         }
         fout.close();
     }
 
-    vector<string> stringToSearch({"Aldus", "injected"});
+    vector<string> stringToSearch({"Aldus", "injected", "humour"});
+    initDictionary(fileNameList);
+    cout << "Inverted search: " << endl;
     unsigned int startTime = clock();
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
-    invertedSearch(fileNameList, stringToSearch);
     invertedSearch(fileNameList, stringToSearch);
     unsigned int stopTime = clock();
 
     unsigned int invertedTime = stopTime - startTime;
 
+    cout << "Simple search: " << endl;
     startTime = clock();
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
-    simpleSearch(fileNameList, stringToSearch);
     simpleSearch(fileNameList, stringToSearch);
     stopTime = clock();
 
     unsigned int simpleTime = stopTime - startTime;
 
+    cout << "------------------------------------------" << endl;
+    cout << "Time: " << endl;
     cout << "inverted " << invertedTime << endl;
     cout << "simple " << simpleTime << endl;
     return 0;

@@ -1,3 +1,3 @@
-/home/timur/CLionProjects/CourseWork/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/timur/CLionProjects/CourseWork/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/timur/CLionProjects/CourseWork/cmake-build-debug/CMakeFiles/CourseWork.dir
+/home/timur/education/Algoritms/code/CourseWork/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/timur/education/Algoritms/code/CourseWork/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/timur/education/Algoritms/code/CourseWork/cmake-build-debug/CMakeFiles/CourseWork.dir

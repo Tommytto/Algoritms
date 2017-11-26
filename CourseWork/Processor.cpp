@@ -8,6 +8,10 @@
 #include "Processor.h"
 
 void Processor::runTask(Task *task) {
+    if (this->busy()) {
+        this->stack->add(this->currentTask());
+        cout << "To stack: " << this->currentTask()->getName() << endl;
+    }
     this->occupyProc(task);
     thread thr(&Processor::threatFunc, this, task);
     thr.detach();
@@ -39,8 +43,13 @@ void Processor::occupyProc(Task *newTask) {
 
 void Processor::freeProc() {
     this->busy(false);
+    delete(this->currentTask());
 }
 
 void Processor::busy(bool busy) {
     this->isBusy = busy;
+}
+
+Processor::Processor(Stack *newStack) {
+    this->stack = newStack;
 }

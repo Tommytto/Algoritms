@@ -3,11 +3,13 @@
 
 CMakeFiles/CourseWork.dir/Processor.cpp.o: ../Processor.cpp
 CMakeFiles/CourseWork.dir/Processor.cpp.o: ../Processor.h
+CMakeFiles/CourseWork.dir/Processor.cpp.o: ../Stack.h
 CMakeFiles/CourseWork.dir/Processor.cpp.o: ../Task.h
 
 CMakeFiles/CourseWork.dir/Queue.cpp.o: ../Processor.h
 CMakeFiles/CourseWork.dir/Queue.cpp.o: ../Queue.cpp
 CMakeFiles/CourseWork.dir/Queue.cpp.o: ../Queue.h
+CMakeFiles/CourseWork.dir/Queue.cpp.o: ../Stack.h
 CMakeFiles/CourseWork.dir/Queue.cpp.o: ../Task.h
 
 CMakeFiles/CourseWork.dir/Stack.cpp.o: ../Stack.cpp
