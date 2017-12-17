@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/timur/education/Algoritms/code/RedBlackTree/Map.cpp
+Map.h
+/home/timur/education/Algoritms/code/RedBlackTree/Map.h
+Product.h
+/home/timur/education/Algoritms/code/RedBlackTree/Product.h
+
+/home/timur/education/Algoritms/code/RedBlackTree/Map.h
+MapItem.h
+/home/timur/education/Algoritms/code/RedBlackTree/MapItem.h
+
+/home/timur/education/Algoritms/code/RedBlackTree/MapItem.cpp
+MapItem.h
+/home/timur/education/Algoritms/code/RedBlackTree/MapItem.h
+Product.h
+/home/timur/education/Algoritms/code/RedBlackTree/Product.h
+
+/home/timur/education/Algoritms/code/RedBlackTree/MapItem.h
+
+/home/timur/education/Algoritms/code/RedBlackTree/Product.cpp
+Product.h
+/home/timur/education/Algoritms/code/RedBlackTree/Product.h
+
+/home/timur/education/Algoritms/code/RedBlackTree/Product.h
+iostream
+-
+
+/home/timur/education/Algoritms/code/RedBlackTree/main.cpp
+iostream
+-
+Map.h
+/home/timur/education/Algoritms/code/RedBlackTree/Map.h
+Product.h
+/home/timur/education/Algoritms/code/RedBlackTree/Product.h
+

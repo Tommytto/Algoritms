@@ -13,6 +13,7 @@ class Task {
 private:
     string name;
     unsigned int time;
+    unsigned int leftTime;
     short int priority;
 
 public:
@@ -21,6 +22,8 @@ public:
     string getName();
 
     unsigned int getTime();
+    unsigned int getLeftTime();
+    void setLeftTime(unsigned int time);
 
     short int getPriority();
 };

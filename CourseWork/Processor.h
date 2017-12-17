@@ -11,21 +11,15 @@
 
 class Processor {
 private:
-    bool isBusy = false;
-    Task *currTask;
-    Stack *stack;
+    Task * currTask;
 public:
-    Processor(Stack *newStack);
-    void runTask(Task *task);
     bool busy();
     void busy(bool busy);
 
-    Task *currentTask();
+    Task * currentTask();
     void currentTask(Task *currentTask);
 
-    void threatFunc(Task *task);
-    void freeProc();
-    void occupyProc(Task *newTask);
+    void work();
 };
 
 

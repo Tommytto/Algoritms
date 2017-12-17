@@ -1,0 +1,3 @@
+/home/timur/education/Algoritms/WordBinaryTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/timur/education/Algoritms/WordBinaryTree/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/timur/education/Algoritms/WordBinaryTree/cmake-build-debug/CMakeFiles/WordBinaryTree.dir

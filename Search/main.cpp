@@ -2,7 +2,6 @@ using namespace std;
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "AlgoritmsInUnsorted.h"
 
 template <typename T>
 int fastLinearSearch(vector<T> array, T toSearch) {
@@ -90,12 +89,6 @@ int blockSearch(vector<T> array, T toSearch) {
             return index;
         }
     }
-
-//    for (int i = 0; i < blockVector.size(); i++) {
-//        cout << blockVector[i] << " ";
-//    }
-//    cout << endl;
-
     return -1;
 }
 

@@ -7,84 +7,77 @@
 #include "Queue.h"
 using namespace std;
 
-const unsigned int TASKS_PULL_SIZE = 100;
-vector<Task *> taskVector(TASKS_PULL_SIZE);
-
-void loadPull(Queue *queue, int priority) {
-    unsigned long taskCounter = taskVector.size();
-    for (unsigned long i = taskCounter - 1; i >= 0; i--) {
-        if (queue->size() == queue->getMaxSize()) {
-            break;
-        } else if (taskVector[i]->getPriority() == priority) {
-            queue->add(taskVector[i]);
-            taskVector.pop_back();
-        }
-    }
+Task* generateTask(int i) {
+    string newName = "Task_" + to_string(i);
+    int time = 2 + rand() % 10;
+    int prior = rand() % 3;
+    return new Task(newName, time, prior);
 }
 
 int main() {
+    srand(time(0));
     Stack *stack1 = new Stack();
-    Processor *proc1 = new Processor(stack1);
-    Queue *queue0 = new Queue(15);
-    Queue *queue1 = new Queue(15);
-    Queue *queue2 = new Queue(15);
-    mt19937 gen(time(0));
-    uniform_int_distribution<> uid(0, 2);
+    Processor *proc1 = new Processor();
+    Queue *queue0 = new Queue();
+    Queue *queue1 = new Queue();
+    Queue *queue2 = new Queue();
+    int taskCount = 1000;
+    int currentTaskCount = 0;
+    int wait = 1;
+    int commonCount = 0;
 
-    for (int i = 0; i < taskVector.size(); i++) {
-        string newName = "Task_" + to_string(i);
-        int time = 1 + rand() % 10;
-        int prior = uid(gen);
-        taskVector[i] = new Task(newName, time, prior);
-    }
-
-    while (0 < (queue0->size() + queue1->size() + queue2->size() + stack1->size() + taskVector.size()) || proc1->busy()) {
-        if (!taskVector.empty()) {
-            Task *currTask = taskVector.back();
-            bool taskLoaded = false;
-
+    while (0 < (queue0->size() + queue1->size() + queue2->size() + stack1->size()) || currentTaskCount != taskCount) {
+        if (currentTaskCount != taskCount && commonCount % wait == 0) {
+            Task * currTask = generateTask(currentTaskCount);
+            currentTaskCount++;
             switch (currTask->getPriority()) {
                 case 0:
-                    if (queue0->getMaxSize() > queue0->size()) {
-                        queue0->add(currTask);
-                        taskLoaded = true;
-                    }
+                    queue0->add(currTask);
                     break;
                 case 1:
-                    if (queue1->getMaxSize() > queue1->size()) {
-                        queue1->add(currTask);
-                        taskLoaded = true;
-                    }
+                    queue1->add(currTask);
                     break;
                 case 2:
-                    if (queue2->getMaxSize() > queue2->size()) {
-                        queue2->add(currTask);
-                        taskLoaded = true;
-                    }
-            }
-
-            if (taskLoaded) {
-                taskVector.pop_back();
+                    queue2->add(currTask);
+                    break;
             }
         }
 
+        Task * currTask = proc1->currentTask();
+        Task * stackTask = stack1->size() == 0 ? nullptr : stack1->back();
+        Task * queueTask = nullptr;
+        Queue *currQueue = nullptr;
         if (0 < queue0->size()) {
-            Task *queueTask = queue0->pop_first();
-            if (!proc1->busy() || queueTask->getPriority() > proc1->currentTask()->getPriority()) {
-                proc1->runTask(queueTask);
-            }
+            queueTask = queue0->front();
+            currQueue = queue0;
         } else if (0 < queue1->size()) {
-            Task *queueTask = queue1->pop_first();
-            if (!proc1->busy() || queueTask->getPriority() > proc1->currentTask()->getPriority()) {
-                proc1->runTask(queueTask);
-            }
+            queueTask = queue1->front();
+            currQueue = queue1;
         } else if (0 < queue2->size()) {
-            Task *queueTask = queue2->pop_first();
-            if (!proc1->busy() || queueTask->getPriority() > proc1->currentTask()->getPriority()) {
-                proc1->runTask(queueTask);
-            }
+            queueTask = queue2->front();
+            currQueue = queue2;
         }
 
+        if (!currTask) {
+            if (queueTask && stackTask && stackTask->getPriority() <= queueTask->getPriority()) {
+                proc1->currentTask(stack1->pop());
+                cout << "FROM STACK " << stackTask->getName() << ", priority: " << stackTask->getPriority() << endl;
+            } else if (queueTask) {
+                proc1->currentTask(currQueue->pop_first());
+            }
+        } else if (queueTask && queueTask->getPriority() < currTask->getPriority()) {
+            Task * taskFromProc = proc1->currentTask();
+            stack1->add(taskFromProc);
+            cout << "TO STACK " << taskFromProc->getName() << ", priority: " << taskFromProc->getPriority() << endl;
+            proc1->currentTask(currQueue->pop_first());
+        }
+
+        if (proc1->currentTask() && 0 != proc1->currentTask()->getLeftTime()) {
+            proc1->work();
+        } else {
+            proc1->currentTask(nullptr);
+        }
+        commonCount++;
     }
 
     delete(stack1);

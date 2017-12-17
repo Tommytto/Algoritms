@@ -13,20 +13,14 @@
 class Queue {
 private:
     vector<Task *> taskVector;
-    unsigned int maxSize;
-    unsigned int pull = 0;
-    bool loadPull = true;
 
 public:
-    Queue(unsigned int size);
-
     Task* pop_first();
+    Task* front();
 
     void add(Task *newTask);
 
     unsigned long size();
-    unsigned int getMaxSize();
-
 };
 
 #endif //COURSEWORK_QUEUE_H

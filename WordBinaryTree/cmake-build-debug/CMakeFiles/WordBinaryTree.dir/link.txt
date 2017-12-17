@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/WordBinaryTree.dir/main.cpp.o  -o WordBinaryTree 

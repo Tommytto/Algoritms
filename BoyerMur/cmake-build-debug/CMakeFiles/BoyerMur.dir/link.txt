@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/BoyerMur.dir/main.cpp.o  -o BoyerMur 

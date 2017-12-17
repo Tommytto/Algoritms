@@ -18,9 +18,9 @@ public:
     void add(Task *newTask);
 
     Task *pop();
+    Task *back();
 
     unsigned long size();
-
 };
 
 

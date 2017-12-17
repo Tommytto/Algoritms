@@ -11,10 +11,17 @@ void Stack::add(Task *newTask) {
 
 Task *Stack::pop() {
     if (0 < this->size()) {
-        cout << "here";
         Task *lastTask = this->taskVector.back();
         this->taskVector.pop_back();
         return lastTask;
+    } else {
+        throw new string("Stack is empty!");
+    }
+}
+
+Task *Stack::back() {
+    if (0 < this->size()) {
+        return this->taskVector.back();
     } else {
         throw new string("Stack is empty!");
     }
